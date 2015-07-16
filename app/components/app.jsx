@@ -63,7 +63,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <Header
           {...this.state.i18n}
           flux={this.props.flux} />

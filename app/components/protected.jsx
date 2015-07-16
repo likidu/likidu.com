@@ -20,7 +20,7 @@ const Protected = requireAuth(class Protected extends Component {
     return (
       <div>
         <h1>Protected</h1>
-        <p>secret mesaage</p>
+        <p>secret mesaage here</p>
       </div>
     );
   }
