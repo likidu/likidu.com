@@ -1,0 +1,19 @@
+{
+  "extends": "eslint-config-airbnb",
+  "globals": {
+    "sinon": true,
+    "chai": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "jsx": true,
+    "generators": true
+  },
+  "rules": {
+    "no-reserved-keys": 0,
+    "no-console": 0,
+    "react/jsx-uses-react": 1
+  }
+}

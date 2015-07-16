@@ -1,0 +1,21 @@
+//- Basic layout template
+doctype html
+html(class='no-js', lang='#{locale}')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+  title=title
+  
+  meta(name='description', content='')
+  meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0')
+  //- Load stylesheets
+  each href, key in assets.style
+    link(key='#{key}', rel='stylesheet', href='#{href}')
+  body
+    //- Actual content
+    block content
+    
+    each src, key in assets.script
+      script(key='#{key}' src='#{src}')
+      
+    script(async, defer, id='button-bjs', src='https://buttons.github.io/buttons.js')
