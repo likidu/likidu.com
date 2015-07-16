@@ -2,6 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import {IntlMixin} from 'react-intl';
 
+import SwipeNav from 'components/swipeNav';
+
 import imageResolver from 'utils/image-resolver';
 import Spinner from 'components/shared/spinner';
 import LangPicker from 'components/shared/lang-picker';
@@ -55,6 +57,19 @@ class Header extends Component {
         <Link to='/' className='app--logo'>
           <img src={reactLogo} alt='react-logo' />
         </Link>
+
+        {/* Swipe Nav */}
+        <SwipeNav>
+          <p to={this._getIntlMessage('routes.users')}>
+            {this._getIntlMessage('header.users')}
+          </p>
+          <p to={this._getIntlMessage('routes.guides')}>
+            {this._getIntlMessage('header.guides')}
+          </p>
+          <p to={this._getIntlMessage('routes.protected')}>
+            {this._getIntlMessage('header.protected')}
+          </p>
+        </SwipeNav>
 
         {/* Links in the navbar */}
         <ul className='app--navbar un-select'>
